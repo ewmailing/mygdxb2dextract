@@ -61,6 +61,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_Body_jniSetTransform_
 
 }
 
+/*
 JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_Body_jniSetTransform__JFFFZ(JNIEnv* env, jobject object, jlong addr, jfloat positionX, jfloat positionY, jfloat angle, jboolean updateContacts) {
 
 
@@ -71,7 +72,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_Body_jniSetTransform_
 	
 
 }
-
+*/
 JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_Body_jniGetTransform(JNIEnv* env, jobject object, jlong addr, jfloatArray obj_vals) {
 	float* vals = (float*)env->GetPrimitiveArrayCritical(obj_vals, 0);
 
