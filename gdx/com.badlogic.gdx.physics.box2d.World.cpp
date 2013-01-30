@@ -146,7 +146,8 @@ b2ContactFilter defaultFilter;
 			shouldCollideID = env->GetMethodID( worldClass, "contactFilter", "(JJ)Z");
 		}
 	
-		b2World* world = new b2World( b2Vec2( gravityX, gravityY ), doSleep );
+		b2World* world = new b2World( b2Vec2( gravityX, gravityY ) );
+		world->SetAllowSleeping( doSleep );
 		return (jlong)world;
 	
 
@@ -624,6 +625,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_World_jniDispose(JNIE
 
 }
 
+/*
 JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_World_setVelocityThreshold(JNIEnv* env, jclass clazz, jfloat threshold) {
 
 
@@ -643,6 +645,7 @@ JNIEXPORT jfloat JNICALL Java_com_badlogic_gdx_physics_box2d_World_getVelocityTh
 	
 
 }
+*/
 
 JNIEXPORT void JNICALL Java_com_badlogic_gdx_physics_box2d_World_jniRayCast(JNIEnv* env, jobject object, jlong addr, jfloat aX, jfloat aY, jfloat bX, jfloat bY) {
 
