@@ -54,6 +54,7 @@ if(BOX2DGDX_BUILD_SHARED)
 		${Box2Dgdx_source}
 	)
 	TARGET_LINK_LIBRARIES(Box2Dgdx_shared ${BOX2D_LIBRARY})
+	SET_TARGET_PROPERTIES(Box2Dgdx_shared PROPERTIES OUTPUT_NAME "Box2Dgdx")
 endif()
 
 
@@ -61,6 +62,7 @@ if(BOX2DGDX_BUILD_STATIC)
 	add_library(Box2Dgdx_static STATIC
 		${Box2Dgdx_source}
 	)
+	SET_TARGET_PROPERTIES(Box2Dgdx_static PROPERTIES OUTPUT_NAME "Box2Dgdx")
 endif()
 
 if(BOX2DGDX_INSTALL)
